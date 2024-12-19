@@ -3,24 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Завтрак для Жены</title>
+    <title>Завтрак для Ланы</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Завтрак для Жены</h1>
+        <h1>🌞 Завтрак для Ланы</h1>
     </header>
     <main>
-        <h2>Выбери блюдо:</h2>
-        <form id="breakfastForm">
-            <label>
-                <input type="radio" name="breakfast" value="Блины"> Блины
-            </label>
-            <label>
-                <input type="radio" name="breakfast" value="Омлет"> Омлет
-            </label>
-            <button type="submit">Заказать</button>
-        </form>
+        <h2>Выберите завтрак:</h2>
+        <div class="menu">
+            <div class="dish">
+                <img src="images/blini.jpg" alt="Блины">
+                <h3>Блины</h3>
+                <p>Нежные домашние блины с вареньем или сметаной.</p>
+                <button class="order-btn" data-dish="Блины">Заказать</button>
+            </div>
+            <div class="dish">
+                <img src="images/omlet.jpg" alt="Омлет">
+                <h3>Омлет</h3>
+                <p>Воздушный омлет с сыром и зеленью.</p>
+                <button class="order-btn" data-dish="Омлет">Заказать</button>
+            </div>
+            <div class="dish">
+                <img src="images/avocado_toast.jpg" alt="Тост с авокадо">
+                <h3>Тост с авокадо</h3>
+                <p>Цельнозерновой тост с авокадо, яйцом и специями.</p>
+                <button class="order-btn" data-dish="Тост с авокадо">Заказать</button>
+            </div>
+            <div class="dish">
+                <img src="images/pancakes.jpg" alt="Панкейки">
+                <h3>Панкейки</h3>
+                <p>Американские панкейки с кленовым сиропом.</p>
+                <button class="order-btn" data-dish="Панкейки">Заказать</button>
+            </div>
+            <div class="dish">
+                <img src="images/granola.jpg" alt="Гранола">
+                <h3>Гранола</h3>
+                <p>Полезная гранола с йогуртом и свежими ягодами.</p>
+                <button class="order-btn" data-dish="Гранола">Заказать</button>
+            </div>
+            <div class="dish">
+                <img src="images/cheesecakes.jpg" alt="Сырники">
+                <h3>Сырники</h3>
+                <p>Классические сырники с вареньем или сгущенкой.</p>
+                <button class="order-btn" data-dish="Сырники">Заказать</button>
+            </div>
+        </div>
     </main>
     <footer>
         <p>Оплата: поцелуйчики 💋</p>
