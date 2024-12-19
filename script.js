@@ -35,7 +35,7 @@ cancelBtn.addEventListener('click', () => {
     modal.classList.add('hidden'); // Закрываем модальное окно
 });
 
-
+// Функция отправки сообщения в Telegram
 async function sendTelegramMessage(dish) {
     const wifeChatId = '1028348298'; // ID чата жены
     const yourChatId = '1340433524'; // Ваш ID чата
@@ -44,12 +44,14 @@ async function sendTelegramMessage(dish) {
     const wifeMessage = `Ваш заказ на завтрак (${dish}) принят! 💖`;
     const yourMessage = `Приготовь ${dish} для жены! 🚀`;
 
+    // Сообщение жене
     await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ chat_id: wifeChatId, text: wifeMessage })
     });
 
+    // Сообщение вам
     await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
