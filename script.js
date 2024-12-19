@@ -4,26 +4,37 @@ const kissesCount = document.getElementById('kisses-count');
 const confirmBtn = document.getElementById('confirm-btn');
 const cancelBtn = document.getElementById('cancel-btn');
 
+// Скрываем модальное окно изначально
+modal.classList.add('hidden');
+
 let currentDish = '';
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
+        // Запоминаем выбранное блюдо
         currentDish = button.dataset.dish;
+
+        // Генерируем случайное количество поцелуев от 1 до 5
         const kisses = Math.floor(Math.random() * 5) + 1;
         kissesCount.textContent = kisses;
+
+        // Показываем модальное окно
         modal.classList.remove('hidden');
     });
 });
 
+// При подтверждении заказа
 confirmBtn.addEventListener('click', async () => {
     await sendTelegramMessage(currentDish);
     alert(`Ваш заказ: ${currentDish} принят!`);
-    modal.classList.add('hidden');
+    modal.classList.add('hidden'); // Закрываем модальное окно
 });
 
+// При отмене заказа
 cancelBtn.addEventListener('click', () => {
-    modal.classList.add('hidden');
+    modal.classList.add('hidden'); // Закрываем модальное окно
 });
+
 
 async function sendTelegramMessage(dish) {
     const wifeChatId = '1028348298'; // ID чата жены
