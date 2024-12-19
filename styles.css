@@ -113,3 +113,65 @@ footer {
     line-height: 1.6;
     margin-bottom: 15px;
 }
+#modal {
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Прозрачный темный фон */
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    z-index: 1000; /* Поверх всех остальных элементов */
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px; /* Ширина модального окна */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #f4a261;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.modal-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#confirm-btn {
+    background: #2a9d8f;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+#confirm-btn:hover {
+    background: #21867a;
+}
+
+#cancel-btn {
+    background: #e76f51;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+#cancel-btn:hover {
+    background: #d65a3b;
+}
