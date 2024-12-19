@@ -175,3 +175,6 @@ footer {
 #cancel-btn:hover {
     background: #d65a3b;
 }
+.hidden {
+    display: none !important; /* Добавляем !important для приоритета */
+}
